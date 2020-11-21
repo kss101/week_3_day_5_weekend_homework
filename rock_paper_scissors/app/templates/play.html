@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="back_panel">
+    <article>
+        <h2>Lets play Rock, Paper, Scissors...</h2>
+        <form action="/select-move" method="post">
+            <label for="move">Select move...</label>
+            <select name="move" id="move">
+                <option value="rock">Rock</option>
+                <option value="paper">Paper</option>
+                <option value="scissors">Scissors</option>
+            </select>
+            <input type="submit" value="Confirm Move">
+        </form>
+    </article>
+</section>
+{% endblock %}

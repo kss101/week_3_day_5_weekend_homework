@@ -2,6 +2,7 @@ from flask import render_template, request, redirect
 from app import app
 from app.models.game import Game
 from app.models.player import Player
+import random
 
 @app.route('/')
 def index():
@@ -18,4 +19,14 @@ def play_a_game(move1, move2):
 @app.route('/welcome')
 def welcome():
     return render_template('welcome.html', title='Rock, Paper, Scissors')
+
+@app.route('/play')
+def play():
+    return render_template('play.html', title='Rock, Paper, Scissors')
+
+@app.route('/select-move', methods=['POST'])
+def select_move():
+    pass
+
+
 
