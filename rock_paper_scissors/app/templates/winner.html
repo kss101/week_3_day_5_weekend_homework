@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>The winner is:</h1>
-    {% if winner != None %}
-    <p>Player 1 picked {{ move1}} and Player 2 picked {{move2}}. The winner is... {{winner}}</p>
-    {% else %}
-    <p>Player 1 picked {{ move1}} and Player 2 picked {{move2}}. The winner is... It's a draw!</p>
-    {% endif %}
-
+<section class="back_panel">
+    <article>
+        <h2>The winner is:</h2>
+        {% if winner != None %}
+        <p>Player 1 picked {{ move1}} and Player 2 picked {{move2}}. The winner is... {{winner}}</p>
+        {% else %}
+        <p>Player 1 picked {{ move1}} and Player 2 picked {{move2}}. The winner is... It's a draw!</p>
+        {% endif %}
+    </article>
+</section>
 {% endblock %}

@@ -17,6 +17,17 @@ body > nav > h1 {
     margin-left: 10px;
 }
 
+body > nav > section {
+    display: flex;
+    justify-content: flex-start;
+
+}
+nav > section > img {
+    border-left: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+    margin-left: 10px;
+}
+
 body >  nav > ul  {
     list-style-type: none;
     margin: 0;
@@ -43,16 +54,22 @@ li a:hover {
     background-color: lightblue;
   }
 
-#rules {
-    background-color: lightblue ;
+.back_panel {
+    background-image: linear-gradient(to right,rgb(122, 160, 211),  lightblue);
     color: white;
     border: 1px solid #bbb;
     margin-top: 10px;
     padding: 10px;
 }
 
-#rules article {
+.back_panel article {
     background-image: linear-gradient(to right, lightblue  ,rgb(122, 160, 211));
     /* background-color: rgb(122, 160, 211); */
     padding: 10px;
+}
+
+article > img {
+    width: 32%;
+    border-radius: 15pc;
+    border: 1px solid #bbb;
 }

@@ -6,7 +6,12 @@
     <body>
 
         <nav>
-          <h1><i>Rock, Paper, Scissors</i></h1>
+            <h1><i>Rock, Paper, Scissors</i></h1>
+            <section>
+                <img src={{ url_for('static', filename='images/rocks.jpg')}} alt="rocks" width="125px" height="75px" />
+                <img src={{ url_for('static', filename='images/paper.jpg')}} alt="paper" width="125px" height="75px" />
+                <img src={{ url_for('static', filename='images/scissors.jpg')}} alt="scissors" width="125px" height="75px" />
+            </section>
             <ul>
               <li><a href="/">Home</a></li>
               <li><a href="/welcome">Welcome</a></li>
