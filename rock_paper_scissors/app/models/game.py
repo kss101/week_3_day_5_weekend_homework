@@ -7,10 +7,9 @@ class Game():
         self.player_2 = player_2
 
     def play_game( self, player_1, player_2 ):
-        print("Computer's name is: " , self.player_2.name)
         if self.player_2.name == "Computer" and self.player_2.move == "":
             self.player_2.move = self.play_against_computer()
-            print("Computer's move is: ", self.player_2.move)
+           # print("Computer's move is: ", self.player_2.move)
 
         if( self.player_1.move == self.player_2.move):
             # print("It's a draw!")
@@ -28,10 +27,10 @@ class Game():
             result= "rock"
 
         if result == self.player_1.move:
-            print("Winner is: ", player_1.name)
+            #print("Winner is: ", player_1.name)
             return player_1.name
         else:
-            print("Winner is: ", player_2.name)
+            #print("Winner is: ", player_2.name)
             return player_2.name
 
     def play_against_computer( self ):
