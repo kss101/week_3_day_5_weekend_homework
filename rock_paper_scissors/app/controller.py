@@ -14,7 +14,7 @@ def play_a_game(move1, move2):
     player_2 = Player( "Player 2", move2 )
     game = Game( player_1, player_2 )
     winner = game.play_game( player_1, player_2 )
-    return (render_template("winner.html", winner = winner, move1=move1, move2 =move2))
+    return (render_template("winner.html", winner = winner, move1=move1, move2=move2))
 
 @app.route('/welcome')
 def welcome():
@@ -26,7 +26,11 @@ def play():
 
 @app.route('/select-move', methods=['POST'])
 def select_move():
-    pass
+    player_1 = Player( "Player 1", request.form['move'] )
+    player_2 = Player( "Computer", "")
+    game = Game( player_1, player_2 )
+    winner = game.play_game( player_1, player_2 )
+    return (render_template("winner.html", winner=winner, move1=player_1.move, move2=player_2.move))
 
 
 
